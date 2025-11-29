@@ -48,7 +48,7 @@ for instruction in instructions:
 
     elif action == "turn off":
         # Diminuer la luminosité de -1 (mais pas en dessous de 0)
-     grid[x1:x2 + 1, y1:y2 + 1] -= 1
+        grid[x1:x2 + 1, y1:y2 + 1] -= 1
         grid[x1:x2 + 1, y1:y2 + 1] = np.maximum(grid[x1:x2 + 1, y1:y2 + 1], 0)
         # np.maximum() garantit qu'aucune valeur ne descend sous 0
 
@@ -61,6 +61,7 @@ print("=" * 50)
 print("RÉSULTAT - PARTIE 2: CONTRÔLE DE LUMINOSITÉ")
 print(f"Luminosité totale: {total_brightness}")
 print("=" * 50)
+
 
 
 
