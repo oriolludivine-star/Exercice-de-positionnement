@@ -22,12 +22,12 @@ for instruction in instructions:
     action = instruction[0]
     x1, y1, x2, y2 = instruction[1], instruction[2], instruction[3], instruction[4]
 
-if action == "turn on":
-    grid[x1:x2+1, y1:y2+1] = True
-elif action == "turn off":
-    grid[x1:x2+1, y1:y2+1] = False
-elif action == "toggle":
-    grid[x1:x2+1, y1:y2+1] = ~grid[x1:x2+1, y1:y2+1]
+    if action == "turn on":
+        grid[x1:x2+1, y1:y2+1] = True
+    elif action == "turn off":
+        grid[x1:x2+1, y1:y2+1] = False
+    elif action == "toggle":
+        grid[x1:x2+1, y1:y2+1] = ~grid[x1:x2+1, y1:y2+1]
 
 lights_on = np.sum(grid)
 print("="* 50)
@@ -61,6 +61,7 @@ print("=" * 50)
 print("RÉSULTAT - PARTIE 2: CONTRÔLE DE LUMINOSITÉ")
 print(f"Luminosité totale: {total_brightness}")
 print("=" * 50)
+
 
 
 
